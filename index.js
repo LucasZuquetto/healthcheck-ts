@@ -7,13 +7,19 @@ app.use(express.json());
 
 // Rota de exemplo
 app.get("/health", async (req, res) => {
-    const client = new TeamSpeakClient("200.163.129.125");
-    await client.connect();
-    if(client.isConnected){
-        res.send("o server do dias ta ooonnnn");
-    }else{
-        res.send("ta offf :(")
-    }
+    try{
+        const client = new TeamSpeakClient("200.163.129.125");
+        await client.connect();
+        if(client.isConnected){
+            res.send("o server do dias ta ooonnnn");
+        }else{
+            res.send("ta offf :(")
+        }
+    } catch (err) {
+      console.error("An error occurred:");
+      console.error(err);
+        res.send("o server ta off :(")
+   }
 });
 
 async function main() {
