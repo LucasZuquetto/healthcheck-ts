@@ -35,7 +35,7 @@ async function main() {
 
     //   await client.send("login", {
     //      client_login_name: "",
-    //      client_login_password: "21010305lz"
+    //      client_login_password: ""
     //   });
 
     //   const clientList = await client.send("clientlist");
