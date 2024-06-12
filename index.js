@@ -11,8 +11,10 @@ app.get("/health", async (req, res) => {
         const client = new TeamSpeakClient("200.163.129.125");
         await client.connect();
         if(client.isConnected){
+            console.log("ta onn");
             res.send("o server do dias ta ooonnnn");
         }else{
+            console.log("caindo no else do off");
             res.send("ta offf :(")
         }
     } catch (err) {
