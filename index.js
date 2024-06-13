@@ -9,6 +9,7 @@ app.use(express.json());
 app.get("/health", async (req, res) => {
     try{
         const client = new TeamSpeakClient("200.163.129.125");
+	await client?.connect();
         client.on("error", data => {
 			console.log(`Message received: ${data.msg}`);
 		});
