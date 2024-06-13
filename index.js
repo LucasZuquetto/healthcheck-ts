@@ -9,12 +9,11 @@ app.use(express.json());
 app.get("/health", async (req, res) => {
     try{
 	    console.log("recebendo req")
-        const client = new TeamSpeakClient("200.163.129.125");
+        const client = new TeamSpeakClient("3.212.217.93");
 	    console.log(client)
 	if(client){
 		console.log("entrou no if")
-		await client.connect();
-		console.log("pós if");
+		//await client.connect();
 	}
 	    console.log("saiu do if")
         client.on("error", data => {
