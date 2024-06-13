@@ -10,7 +10,7 @@ app.get("/health", async (req, res) => {
     try{
 	    console.log("recebendo req")
         const client = new TeamSpeakClient("200.163.129.125");
-	    console.log("pós instância do ts")
+	    console.log(client)
 	if(client){
 		console.log("entrou no if")
 		await client.connect();
