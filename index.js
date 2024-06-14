@@ -13,9 +13,9 @@ app.get("/health", async (req, res) => {
 	    console.log(client)
 	if(client){
 		console.log("entrou no if")
-		//await client.connect();
+		await client.connect();
 	}
-	    console.log("saiu do if")
+	    console.log(client)
         client.on("error", data => {
 			console.log(`Message received: ${data.msg}`);
 		});
